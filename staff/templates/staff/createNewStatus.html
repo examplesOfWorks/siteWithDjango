@@ -1,0 +1,21 @@
+{% extends "staff/layoutStaff.html" %}
+{% block title %}Посмотреть статус{% endblock %}
+    {% load static  %}
+{% block content %}
+        <div class="container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <form action ="{% url 'addStatus' %}">
+                <h5 class="text-center">Статус организации мероприятия</h5>
+
+                <input type="text" class="form-control" id="title" name="title" placeholder="Этапы организации мероприятия" rows="3">{{title}}</input>
+                <br>
+                <div class="text-center">
+                    <button type="submit"  class="btn btn-outline-info" style="width: 35%;">Добавить</button>
+                </div>
+            </form>
+        </div>
+{% endblock %}

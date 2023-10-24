@@ -1,0 +1,11 @@
+{% extends "staff/layoutStaff.html" %}
+{% block title %}Редактировать статус{% endblock %}
+    {% load static  %}
+{% block content %}
+<form action="/updateStatus/{{id}}">
+    <h5 class="text-center">Статус организации мероприятия</h5>
+    <input type="text" class="form-control" id="title" name="title" placeholder="Этапы организации мероприятия" rows="3">{{title}}</input>
+    <br>
+    <button type="submit"  class="btn btn-outline-info" style="width: 35%;">Редактировать</button>
+</form>
+{% endblock %}

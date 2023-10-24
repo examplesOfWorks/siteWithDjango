@@ -1,0 +1,45 @@
+{% extends "staff/layoutStaff.html" %}
+{% block title %}Заявка клиента{% endblock %}
+    {% load static  %}
+{% block content %}
+<div class="container"><br>
+    <div class="card">
+    <div class="row">
+        <div class="col-md-6">
+            <h6>Заявка №: {{ id_app }}</h6>
+            <br>
+            <p><b><i>Имя/наименование клиента:</i></b> {{ nameOfClient }}</p>
+            <br>
+            <p><b><i>Номер телефона:</i></b> {{ phoneOfClient }}</p>
+            <br>
+            <p><b><i>Что нужно организовать:</i></b> {{ kindOfEvent }}</p>
+            <br>
+            <p><b><i>Цель мероприятия:</i></b> {{ purposeOfEvent }}</p>
+            <br>
+            <p><b><i>Дата и время мероприятия:</i></b> {{ dateTimeOfEvent }}</p>
+            <br>
+            <p><b><i>Бюджет:</i></b> {{ budgetOfEvent }} </p>
+            <br>
+        </div>
+        <div class="col-md-6">
+            <br>
+            <br>
+            <p><b><i>Место проведения:</i></b> {{ placeOfEvent }}</p>
+            <br>
+            <p><b><i>Количество присутствующих:</i></b> {{ numberOfGuests }}</p>
+            <br>
+            <p><b><i>Средний возраст присутствующих:</i></b> {{ ageOfGuests }}</p>
+            <br>
+            <p><b><i>Сроки:</i></b> {{ periodOfPreparation }} </p>
+            <br>
+            <p><b><i>Доп информация:</i></b> {{ addInfo }} </p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="text-center">
+        <a href="/listStatus" class="btn btn-outline-info" style="width: 35%;">Статус</a>
+    </div>
+</div>
+{% endblock %}
+

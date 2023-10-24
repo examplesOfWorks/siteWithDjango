@@ -1,0 +1,16 @@
+{% extends "user/layoutForClients.html" %}
+{% block title %}Посмотреть статус{% endblock %}
+    {% load static  %}
+{% block content %}
+<div class="container">
+    <br>
+    <br>
+    <h5 class="text-center">Статус организации мероприятия</h5>
+    {% for i in allStatuses %}
+        <p class="card-title">{{ i.title }}</p>
+        <p class="card-title">{{ i.created_et }}</p>
+    {% endfor %}
+  </div>
+</div>
+</div>
+{% endblock %}
